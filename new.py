@@ -7,10 +7,6 @@ from cryptography.fernet import Fernet
 if sys.version_info < (3, 6):
     import sha3
 
-root_dir = os.getcwd()
-randommm = open(str(root_dir) + '\\secret.txt')
-data1 = randommm.read()
-val = str(data1.split('\n')[1])
 string = ""
 
 def list_format(lis):
@@ -132,6 +128,11 @@ def hash(name: str):
     return str
 
 def encrypt_by_password(name: str, key: str):
+    root_dir = os.getcwd()
+    randommm = open(str(root_dir) + '\\secret.txt')
+    data1 = randommm.read()
+    val = str(data1.split('\n')[1])
+
     try:
         # Start timitng
         start  = time.time()
@@ -153,6 +154,11 @@ def encrypt_by_password(name: str, key: str):
         return "Cannot encrypt"
 
 def decrypt_by_password(name: str, key: str):
+    root_dir = os.getcwd()
+    randommm = open(str(root_dir) + '\\secret.txt')
+    data1 = randommm.read()
+    val = str(data1.split('\n')[1])
+
     try:
         # Start timitng
         start  = time.time()

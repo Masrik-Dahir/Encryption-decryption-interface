@@ -1,0 +1,12 @@
+Demo.py
+git*.sh
+*.ui
+*.spec
+*.pdf
+*.docx
+*.key
+*.txt
+Demo/*
+a/*
+.idea/*
+__pycache__/*
